@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Your Home Page</title>
+</head>
+<body>
+   <h1>{{author_name}}</h1>
+       <h2> Welcome to Your Blog </h2>
+   <form method="post" action="{% url 'first_blog:user_home_page' author_name %}">
+   <input type="submit" value="list all blogs" name="list_of_all_blogs" style="width: 100px;"/>
+       {% csrf_token %}
+        {% for each_blog in user_entry %}
+            <hr>
+            <label>
+                 <h4>{{ each_blog.subject }}</h4>
+            </label>
+            <br>
+            Published on {{ each_blog.date_created }}
+            <br><br>
+                {{ each_blog.body }}
+            <br><br>
+       {% endfor %}
+        <br><br>
+     <input type="submit" value="Create New Entry" name="create_entry_page"/>
+     <input type="submit" value="Sign out" name="sign_out_button">
+   </form>
+</body>
+</html>

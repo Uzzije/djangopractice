@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>All Blog Entries</title>
+</head>
+<body>
+    <form action="{% url 'first_blog:list_all_blog_entries' all_blogs %}" method="post">
+    <h1>All Blog Entries</h1>
+    {% csrf_token %}
+    {% for each_blog in all_blogs %}
+         <hr>
+            <label>
+                <h4> Author: {{ each_blog.author }}</h4>
+            </label>
+                <br>
+            <label>
+                 <h4>Headline: {{ each_blog.subject }}</h4>
+            </label>
+            <br>
+            Published on {{ each_blog.date_created }}
+            <br><br>
+                {{ each_blog.body }}
+            <br><br>
+       {% endfor %}
+        <input type="submit" value="Sign Out" name="sign_out_button"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>User Login Page</title>
+</head>
+<body>
+    <form action="{% url 'first_blog:log_in_page' %}"method="post">
+        {% csrf_token %}
+        <h2>Login</h2>
+        <br><br>
+        <label>
+            User Name
+            <input type="type" name="user_name" value={{ user_name }}>{{ input_error }}
+        </label>
+        <br><br>
+        <label>
+            Password
+            <input type="password" name="user_password" value={{ user_password }}>
+        </label>
+        <br><br>
+        <input type="submit" name="LogIn">
+    </form>
+</body>
+</html>

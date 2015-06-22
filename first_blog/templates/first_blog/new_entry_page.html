@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>New Entry Page</title>
+</head>
+<body>
+    <form method="post" action="{% url 'first_blog:new_blog_entry' user_name %}">
+            {% csrf_token %}
+                <label>
+                    <h3>Subject</h3>
+                    <input type="text" name="subject" value="{{ subject }}" style="width: 300px;"/>
+                </label>
+                    <br><br>
+                <label>
+                    <h3>Body</h3>
+                    <br><br>
+                    <textarea rows="40" cols="150" name="user_blog_body">{{ user_blog_body }}</textarea>
+                </label>
+                <br><br>
+            <input size=""type="submit" value="Create Blog" style="width: 100px;"/>
+    </form>
+</body>
+</html>
