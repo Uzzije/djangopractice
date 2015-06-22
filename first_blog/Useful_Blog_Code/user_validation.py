@@ -1,7 +1,9 @@
-__author__ = 'Administrator'
+__author__ = 'Uzzi Emuchay'
 import re
 from first_blog import models
+
 NAME_VALID = re.compile(r"^[a-zA-Z0-9_-]{3,20}$")
+
 def sign_up_entry_validation(user_name, password, verify_password, email):
     user_name_valid = sign_up_check_valid_name(user_name)
     email_valid = check_valid_email(email)
