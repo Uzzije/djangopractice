@@ -7,7 +7,6 @@ import datetime
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from first_blog.blog_forms import form_templates
-from django.views.generic.base import TemplateResponseMixin
 
 # Create your views here.
 class GeneralHomePageView(View):
