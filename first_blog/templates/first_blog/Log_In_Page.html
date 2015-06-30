@@ -5,21 +5,11 @@
     <title>User Login Page</title>
 </head>
 <body>
-    <form action="{% url 'first_blog:log_in_page' %}"method="post">
+    <form action="{% url 'first_blog:log_in_page' %}" method="post">
         {% csrf_token %}
         <h2>Login</h2>
-        <br><br>
-        <label>
-            User Name
-            <input type="type" name="user_name" value={{ user_name }}>{{ input_error }}
-        </label>
-        <br><br>
-        <label>
-            Password
-            <input type="password" name="user_password" value={{ user_password }}>
-        </label>
-        <br><br>
-        <input type="submit" name="LogIn">
+            {{ form.as_p }}
+        <input type="submit" name="Login">
     </form>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <form action="{% url 'first_blog:list_all_blog_entries' all_blogs %}" method="post">
     <h1>All Blog Entries</h1>
     {% csrf_token %}
-    {% for each_blog in all_blogs %}
+    {% for each_blog in all_blog_entry %}
          <hr>
             <label>
                 <h4> Author: {{ each_blog.author }}</h4>
