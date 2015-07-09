@@ -1,3 +1,4 @@
+{% extends "first_blog/general_home_page.html" %}
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -5,12 +6,25 @@
     <title>User Sign Up</title>
 </head>
 <body>
-    <h1>Sign Up Page!</h1>
+    <h1>{% block title %}Sign Up Page!{% endblock %}</h1>
+    {% block content %}
     <form action=" {% url 'first_blog:sign_up_page' %}" method="post">
         {% csrf_token %}
+        <div class="container">
+            <div class="form-row center-block">
+                <div class="col-md-12 center-block">
+                <div class="form-centered img-responsive">
             {{ form.as_p }}
-        <br><br>
-        <input type="submit" name="Register">
+            <br>
+                    <div class="submit-form">
+                         <input type="submit" name="Register">
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
     </form>
+    {% endblock %}
 </body>
 </html>

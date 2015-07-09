@@ -1,0 +1,42 @@
+body {
+    background-image: url('blog_site_background_image.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+.pos_center {
+    margin:auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    right:0%;
+    bottom:0;
+}
+.form-centered {
+    font-family: 'Indie Flower', cursive;
+    color: #55f433;
+    font-size: 20px;
+    padding: 30%;
+    margin:auto;
+}
+.margin-custom-right{
+    margin-right: 10%;
+}
+.submit-form {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkred;
+}
+.jumbotron{
+    background-color: #191519;
+    color: white;
+    padding: 0.5em 0.6em;
+    font-family: cursive;
+}
+footer{
+    color: white;
+}
